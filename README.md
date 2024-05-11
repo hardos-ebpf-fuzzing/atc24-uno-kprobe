@@ -107,6 +107,11 @@ Boot the kernel with QEMU:
 ../q
 ```
 
+Register the kprobe onto a test system call we created:
+```shell
+insmod ./samples/kprobe/kprobe_example.ko
+```
+
 Run the userspace benchmark program to benchmark the optimized kprobe
 performance:
 ```shell
