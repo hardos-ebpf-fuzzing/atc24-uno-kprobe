@@ -1,6 +1,6 @@
 # ATC24: Fast (Trapless) Kernel Probes Everywhere
 
-#### Environment setup
+### Environment setup
 This artifact uses Docker to setup the environment. Please make sure Docker
 is installed before move on.
 
@@ -17,7 +17,7 @@ This step may take a while, as it builds our modified `llvm` together with
 `clang` and `lld`.
 
 
-#### Build and benchmark the un-optimized kernel
+### Build and benchmark the un-optimized kernel
 Enter the Docker container first:
 ```shell
 # working dir should be /atc24/ upon entry
@@ -69,7 +69,7 @@ performance:
 
 When done, use `Control-D` to exit the VM
 
-#### Build and benchmark the optimized kernel
+### Build and benchmark the optimized kernel
 The implementation details of the LLVM pass can be found under
 `llvm-project/llvm/lib/Target/X86/X86KprobeOpt.cpp`; the kernel side
 support code is under `linux/arch/x86/kernel/kprobes/nop-opt`.
