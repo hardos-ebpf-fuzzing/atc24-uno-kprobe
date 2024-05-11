@@ -117,3 +117,32 @@ performance:
 ```shell
 ../test
 ```
+
+## Modified files in detail
+### llvm-project
+```
+llvm/lib/Target/X86/CMakeLists.txt
+llvm/lib/Target/X86/X86.h
+llvm/lib/Target/X86/X86AsmPrinter.h
+llvm/lib/Target/X86/X86InstrCompiler.td
+llvm/lib/Target/X86/X86KprobeOpt.cpp
+llvm/lib/Target/X86/X86MCInstLower.cpp
+llvm/lib/Target/X86/X86TargetMachine.cpp
+```
+### linux
+```
+arch/Kconfig
+arch/x86/Kconfig
+arch/x86/include/asm/kprobes.h
+arch/x86/kernel/alternative.c
+arch/x86/kernel/kprobe_bench.c
+arch/x86/kernel/kprobes/Makefile
+arch/x86/kernel/kprobes/common.h
+arch/x86/kernel/kprobes/core.c
+arch/x86/kernel/kprobes/nop-opt/Makefile
+arch/x86/kernel/kprobes/nop-opt/nop-opt.c
+arch/x86/kernel/kprobes/nop-opt/nop-opt_64.S
+arch/x86/kernel/kprobes/opt.c
+include/linux/kprobes.h
+kernel/kprobes.c
+```
