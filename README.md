@@ -2,7 +2,8 @@
 
 ## Environment setup
 This artifact uses Docker to setup the environment. Please make sure Docker
-is installed before move on.
+is installed before move on. The QEMU script also requires KVM to be
+available on the host machine.
 
 First, clone the repo:
 ```shell
