@@ -55,7 +55,7 @@ directory.
 
 Register the kprobe onto a test system call we created:
 ```shell
-insmod ./samples/kprobe/kprobe_example.ko
+insmod ./samples/kprobes/kprobe_example.ko
 ```
 This step registers a kprobe onto the instruction we crafted in the
 `kprobe_bench_test_func` function. This instruction is not optimizable by
@@ -113,7 +113,7 @@ Boot the kernel with QEMU:
 
 Register the kprobe onto a test system call we created:
 ```shell
-insmod ./samples/kprobe/kprobe_example.ko
+insmod ./samples/kprobes/kprobe_example.ko
 ```
 
 Run the userspace benchmark program to benchmark the optimized kprobe
