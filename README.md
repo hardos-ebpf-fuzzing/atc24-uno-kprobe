@@ -15,10 +15,13 @@ cd atc24-uno-kprobe
 docker build . -t 'kprobe'
 ```
 This step may take a while, as it builds our modified `llvm` together with
-`clang` and `lld`.
+`clang` and `lld`. Also note that LLVM toolchain compilation generally
+takes large amount of resources, especially memory, so the build process
+may get killed on system with low memory. This Docker build is tested on a
+Linux system with 32GB memory.
 
 
-## Build and benchmark the un-optimized kernel
+## Build and benchmark the unoptimized kernel
 Enter the Docker container first:
 ```shell
 # working dir should be /atc24/ upon entry
@@ -118,6 +121,10 @@ performance:
 ```shell
 ../test
 ```
+
+The unoptimized and optimized result from QEMU will likely be different
+from the results reported in the paper on baremetal machines, but the
+performance improvement should still be significant.
 
 ## Modified files in detail
 ### llvm-project
